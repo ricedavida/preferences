@@ -1,0 +1,5 @@
+screen -t home 
+screen -t ttyS0 /dev/ttyS0 115200
+screen -t ttyS1 /dev/ttyS1 115200
+screen -t ttyS2 /dev/ttyS2 115200
+screen -t farm ssh david.rice@barn01.timesys.com
