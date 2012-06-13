@@ -1,6 +1,6 @@
 #
 # ~/.bash_aliases
-#
+# currently designed for work at timesys
 
 # clone a new factory
 alias new_factory='git clone ssh://davidr@engservices.timesys.com/pub/git/factory.git'
