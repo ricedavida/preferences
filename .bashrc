@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 
-sh .randline.sh .nerdquotes
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 shopt -s checkwinsize
@@ -30,24 +29,24 @@ set_prompt_style () {
 }
 
 set_prompt_style
-
+export TERM=xterm
 export EDITOR="vim"
-
-#The 'ls' family (in all it's glory)
-####################################
-alias ls="ls -G"
-alias ll="ls -lG"
-#alias ls="ls --color=auto"  # add colors for filetype recognition
-alias la="ls -aG"            # show hidden files
-alias lx="ls -lXBG"          # sort by extension
-alias lk="ls -lSrG"          # sort by size, biggest last
-alias lc="ls -ltcrG"         # sort by and show change time, most recent last
-alias lu="ls -lturG"         # sort by and show access time, most recent last
-alias lt="ls -ltrG"          # sort by date, most recent last
-alias lm="ls -alG |more"     # pipe through 'more'
-alias lr="ls -lRG"           # recursive ls
-alias lsr="tree -CsuG"       # nice alternative to 'recursive ls'
 
 complete -cf sudo
 complete -cf man
 
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
