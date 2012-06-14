@@ -1,19 +1,16 @@
 "------~------~
-" Anthony Clark
+" David Rice
 "------~------~
 " 
 " My evergrowing vimrc.
-" Most of this taken from Sam B.
-" and his vimrc minimal.
-" https://github.com/samba/dotfiles/tree/master/vim
-"
+" Most of this taken from Anthony Clark
 "
 set nocompatible                      " Do not accomodate vi
 set term=$TERM                        " Give vim your term settings
 set t_Co=256                          " Assure 256 color
-"set backup                            " Sets backup
-"set backupdir=$HOME/.vim/backup       " Backup files location
-"set directory=$HOME/.vim/swap         " Swap files location
+set backup                            " Sets backup
+set backupdir=$HOME/.vim/backup       " Backup files location
+set directory=$HOME/.vim/swap         " Swap files location
 set tags=./tars,$HOME/.vim/tags       " You probably want to add more to these later.
 set hlsearch                          " Highlighted search enabled by default
 set incsearch                         " Search options
@@ -34,7 +31,6 @@ set ww=b,s,h,l,<,>,[,]                " Whichwrap -- left/right keys can travers
 set wildmenu                          " Enhanced tab-completion shows all matching cmds in a popup menu
 set backspace=indent,eol,start        " Backspace
 set stal=2                            " Show tab line
-
 
 " Status Bar
 set statusline=\ \%f%m%r%h%w\ ::\ %y\ [%{&ff}]\%=\ [%p%%:\ %l/%L] 
