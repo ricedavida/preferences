@@ -29,11 +29,13 @@ set_prompt_style () {
 }
 
 set_prompt_style
-export TERM=xterm
+#export TERM=xterm
 export EDITOR="vim"
 
 complete -cf sudo
 complete -cf man
+
+exec ~/.randomline ~/.nerdquotes
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

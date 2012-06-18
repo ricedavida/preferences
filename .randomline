@@ -1,0 +1,17 @@
+#!/bin/bash
+# randomline : extracts a random line from a text file
+     
+if [ -z $1 ] ; then
+echo "Usage : $0 <file>"
+exit 0
+fi
+     
+NB_LINES=$(expr $(wc -l $1 | sed -e 's/ *//' | cut -f1 -d " "))
+  
+NB_RAND=0
+while [ "$NB_RAND" -eq 0 ]
+do
+NB_RAND=$(expr $RANDOM \% $NB_LINES)
+done
+    
+sed -n "${NB_RAND}p;${NB_RAND}q" $1
